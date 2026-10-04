@@ -72,7 +72,7 @@ const translations = {
     usd: '$'
   },
   en: {
-    title: '🎯 CS2 BOOST CALCULATOR',
+    title: '🎯 BOOST CALCULATOR CS2',
     boostType: 'Boost type',
     solo: 'Solo boost (self-play)',
     party: 'Party boost',
