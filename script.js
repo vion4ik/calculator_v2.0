@@ -280,12 +280,23 @@ document.querySelectorAll('#currencySwitch .switch-btn').forEach(btn => {
 });
 
 // ========== АВТОПЕРЕСЧЁТ ==========
-document.getElementById('currentElo').addEventListener('input', calculate);
-document.getElementById('targetInput').addEventListener('input', calculate);
-document.getElementById('markup').addEventListener('input', calculate);
+// document.getElementById('currentElo').addEventListener('input', calculate);
+// document.getElementById('targetInput').addEventListener('input', calculate);
+// document.getElementById('markup').addEventListener('input', calculate);
+// document.getElementById('boostType').addEventListener('change', function () {
+//  updateFields();
+// calculate();
+// }); 
+
+// ========== СМЕНА ТИПА БУСТА ==========
+// Обновляем поля и пересчитываем только если цена уже была показана
 document.getElementById('boostType').addEventListener('change', function () {
   updateFields();
-  calculate();
+  const resultDiv = document.getElementById('result');
+  // Пересчитываем, только если в блоке уже есть результат (не заглушка)
+  if (resultDiv.querySelector('.price')) {
+    calculate();
+  }
 });
 
 document.querySelectorAll('input').forEach(input => {
