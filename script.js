@@ -214,7 +214,7 @@ function applyLanguage() {
   });
 
   document.documentElement.lang = currentLang;
-  document.title = currentLang === 'ru' ? 'Калькулятор буста CS2' : 'CS2 Boost Calculator';
+  document.title = currentLang === 'ru' ? 'Boost CS2' : 'Boost CS2';
 
   updateFields();
 }
